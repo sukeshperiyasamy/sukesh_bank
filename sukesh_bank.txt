@@ -1,0 +1,23 @@
+CREATE TABLE userdetails (
+    accountnumber INT NOT NULL AUTO_INCREMENT,
+    dob VARCHAR(10),
+    proof VARCHAR(10),
+    date DATE,
+    username VARCHAR(20),
+    PRIMARY KEY (accountnumber),
+    UNIQUE KEY (username)
+);
+
+
+CREATE TABLE acc_details (
+    accountnumber INT,
+    balance INT,
+    INDEX(accountnumber)
+);
+
+CREATE TABLE user_credentials (
+    username VARCHAR(15) NOT NULL PRIMARY KEY,
+    password VARCHAR(15),
+    emailid VARCHAR(30),
+    date DATE
+);
